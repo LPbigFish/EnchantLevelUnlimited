@@ -1,0 +1,78 @@
+# EnchantLevelUnlimited - Remove enchantment level limits in anvils
+
+settings:
+  # XP cost strategy when combine would exceed the "Too Expensive" threshold (cost >= 40)
+  # clamp     = always set cost to 39 (max allowed below "Too Expensive"), works on all versions
+  # raise-cap = raise the "Too Expensive" cap to Integer.MAX_VALUE (requires 1.13+; clamps on 1.8-1.12)
+  cost-strategy: clamp
+
+  # Reset prior-work penalty to 0 on combined results (prevents exponential cost escalation)
+  reset-penalty: true
+
+  # Allow mutually-exclusive enchantments to coexist on the same item
+  allow-damage-conflicts: false       # Sharpness + Smite + Bane of Arthropods
+  allow-protection-conflicts: false   # all 4 protection types together
+  allow-bow-conflicts: false          # Infinity + Mending
+  allow-boots-conflicts: false        # Depth Strider + Frost Walker
+  allow-crossbow-conflicts: false     # Multishot + Piercing
+
+  # Allow enchants on tools they're not normally compatible with (e.g., Silk Touch on a sword)
+  # false = respect vanilla tool-enchant compatibility (incompatible sacrifice enchants are skipped)
+  # true  = allow incompatible tool-enchant combinations
+  allow-incompatible-tool: false
+
+# Enchantment max levels (vanilla keys, lowercase)
+# Enchants NOT listed here default to their vanilla getMaxLevel()
+# Values listed here OVERRIDE vanilla max - set higher to allow unlimited combining
+# NOTE: Hard cap is 255 — Minecraft/Paper won't store enchant levels above this
+enchants:
+  # === 1.8 ===
+  protection: 10
+  fire_protection: 10
+  feather_falling: 10
+  blast_protection: 10
+  projectile_protection: 10
+  respiration: 10
+  aqua_affinity: 5
+  thorns: 10
+  depth_strider: 10
+  sharpness: 10
+  smite: 10
+  bane_of_arthropods: 10
+  knockback: 10
+  fire_aspect: 10
+  looting: 10
+  efficiency: 10
+  silk_touch: 1
+  unbreaking: 10
+  fortune: 10
+  power: 10
+  punch: 10
+  flame: 5
+  infinity: 1
+  luck_of_the_sea: 10
+  lure: 10
+  # === 1.9 ===
+  frost_walker: 10
+  mending: 5
+  # === 1.11 ===
+  binding_curse: 1
+  vanishing_curse: 1
+  sweeping_edge: 10
+  # === 1.13 ===
+  loyalty: 10
+  impaling: 10
+  riptide: 10
+  channeling: 1
+  # === 1.14 ===
+  multishot: 1
+  quick_charge: 10
+  piercing: 10
+  # === 1.16 ===
+  soul_speed: 10
+  # === 1.19 ===
+  swift_sneak: 10
+  # === 1.21 ===
+  density: 10
+  breach: 10
+  wind_burst: 10
