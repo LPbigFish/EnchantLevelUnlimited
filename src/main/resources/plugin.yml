@@ -1,0 +1,31 @@
+name: EnchantLevelUnlimited
+description: Remove enchantment level limits in anvils. Combine enchants beyond vanilla caps on 1.8—1.21+.
+version: '${version}'
+
+main: me.lpbigfish.enchantLevelUnlimited.EnchantLevelUnlimited
+api-version: '1.13'
+folia-supported: true
+
+authors: [ LPbigFish ]
+website: https://github.com/LPbigFish/EnchantLevelUnlimited
+
+commands:
+  enchantlevelunlimited:
+    description: EnchantLevelUnlimited admin commands
+    usage: /<command> [reload|info]
+    aliases: [elu]
+    permission: enchantlevelunlimited.info
+
+permissions:
+  enchantlevelunlimited.info:
+    description: View plugin information
+    default: true
+  enchantlevelunlimited.reload:
+    description: Reload the plugin configuration
+    default: op
+  enchantlevelunlimited.*:
+    description: All EnchantLevelUnlimited permissions
+    default: op
+    children:
+      enchantlevelunlimited.info: true
+      enchantlevelunlimited.reload: true
