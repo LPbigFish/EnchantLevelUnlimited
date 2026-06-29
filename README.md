@@ -102,7 +102,7 @@ This plugin uses bStats (https://bstats.org) to collect anonymous usage statisti
 
 ## Links
 
-- [SpigotMC](https://www.spigotmc.org/)
-- [BuiltByBit](https://builtbybit.com/)
-- [Modrinth](https://modrinth.com/)
+<!-- - [SpigotMC](https://www.spigotmc.org/) -->
+- [BuiltByBit](https://builtbybit.com/resources/enchantlevelunlimited.114351/)
+<!-- - [Modrinth](https://modrinth.com/) -->
 - [GitHub](https://github.com/LPbigFish/EnchantLevelUnlimited)
